@@ -1,0 +1,9 @@
+pathlib
+pandas
+numpy
+mlflow
+scikit-learn
+matplotlib
+pyYAML
+joblib
+flask
