@@ -12,4 +12,6 @@ steps:
 9.This loggwr will help us to log the process easily
 8.in that __init__.py file we can create a logs folder by calling a create file
 9.which will call the function create_file function in src/MLOPS/utils/common.py
-10.in that logs folder logging.log file is created which will store every log which the program generated
+10.this function will create logs folder and logging.log file this logging.log file is will save our loggings
+11.to create logs folder as mentioned below i created a params/params.yaml(modified in emplate .py) from that i will create the logs/logging.log file
+12.

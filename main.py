@@ -1,2 +1,2 @@
 from src.MLOPS import logger
-logger("custom log")
+logger.info("custom log")
