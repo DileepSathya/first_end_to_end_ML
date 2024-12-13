@@ -20,9 +20,10 @@ list_of_files=[
     f"src/{project_name}/pipeline/Data_transformation.py",
     f"src/{project_name}/pipeline/model_trainer.py",
     f"src/{project_name}/pipeline/model_evaluater.py",
-    "params/params.yaml",
+
     "main.py",
     "app.py",
+    "setup.py"
 
 ]
 for filepath in list_of_files:

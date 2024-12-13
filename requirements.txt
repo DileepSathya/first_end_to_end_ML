@@ -7,3 +7,4 @@ matplotlib
 pyYAML
 joblib
 flask
+setuptools
