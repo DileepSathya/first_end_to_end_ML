@@ -11,4 +11,5 @@ steps:
 8.In src/MLOPS/__int__.py we have to create a logger 
 9.This loggwr will help us to log the process easily
 8.in that __init__.py file we can create a logs folder in that logging.log file to save the logging info
-
+9.create a config folder in that create a config.yaml file so  that we can specify the data download link and artifacts folder path
+10.in src/MLOPS/utils/common.py create a funtion call read_yaml

@@ -1,7 +1,7 @@
 import os
 from src.MLOPS import logger
-
-
+import yaml
+from pathlib import Path
 
 def file_creation(path):
     directory = os.path.dirname(path)
@@ -30,6 +30,17 @@ def file_creation(path):
             logger.info("File not found. Created an empty file.")
         except Exception as e:
             logger.error(f"An error occurred while creating the file: {e}")
+
+def read_yaml(yaml_path):
+    try:
+        with open(yaml_path) as yaml_file:
+            content=yaml.safe_load(yaml_file)
+            logger.info(f"yaml file{yaml_path} loaded succesfully")
+            return content
+    except Exception as e:
+        raise e
+
        
 if __name__=="__main__":
-    file_creation("params/params.yaml")
+    read_yaml(Path("config/config.yaml"))
+    
