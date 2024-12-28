@@ -2,6 +2,7 @@ from src.MLOPS import logger
 from src.MLOPS.utils.common import read_yaml,file_creation
 from src.MLOPS.constants import *
 import urllib.request as request
+import zipfile
 
 class Data_ingestion:
     def download_data(data_url,file_path):
@@ -9,7 +10,9 @@ class Data_ingestion:
             url=data_url,
             filename=file_path
         )
-
+    def data_unzipping(filepath,unzip_loc):
+        with zipfile.ZipFile(filepath,'r') as zipref:
+            zipref.extractall(unzip_loc)
 
 
 

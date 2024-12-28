@@ -6,12 +6,14 @@ from src.MLOPS.configurations.configurations import config_manager
 
 class data_ingestion_pipeline:
     def data_ingestion():
-        data_url,file_path=config_manager.data_ingestion_config()
+        data_url,file_path,unzip_path=config_manager.data_ingestion_config()
 
         file_creation(file_path)
         
         Data_ingestion.download_data(data_url,file_path)
-
+        logger.info("downloading data from url success")
+        Data_ingestion.data_unzipping(file_path,unzip_path)
+        logger.info("unzipping the data successful")
 
 
 

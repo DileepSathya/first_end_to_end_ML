@@ -7,9 +7,10 @@ class config_manager:
         yaml_file=read_yaml(CONFIG_FILE_PATH)
         file_path=yaml_file["data_ingestion"]["location"]
         data_url=yaml_file["data_ingestion"]["url"]
-        logger.info("path and url returned succesfully")
+        unzip_path=yaml_file["data_ingestion"]["unzip_loc"]
+        logger.info("reading yamlfile successful")
 
-        return data_url,file_path
+        return data_url,file_path,unzip_path
 
 
 

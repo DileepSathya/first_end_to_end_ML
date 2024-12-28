@@ -15,9 +15,20 @@ filename2="artifacts/data_validation/data.zip"
 file_creation(filename)
 file_creation(filename2)"""
 
-from src.MLOPS.utils.common import read_yaml,file_creation
+"""from src.MLOPS.utils.common import read_yaml,file_creation
 from src.MLOPS.constants import *
 
 x=read_yaml(CONFIG_FILE_PATH)
 #y=x.data_ingestion
-print(x["data_ingestion"]["data_download_path"])
+print(x["data_ingestion"]["data_download_path"])"""
+
+"""import zipfile
+from src.MLOPS.utils.common import file_creation
+filepath="artifacts/data_ingestion/data.zip"
+unzip_save="artifacts/data_ingestion/data"
+def data_unzipping():
+    with zipfile.ZipFile(filepath,'r') as zipref:
+        zipref.extractall(unzip_save)
+    
+
+data_unzipping()"""

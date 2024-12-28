@@ -2,4 +2,5 @@
 
 data_ingestion:
     location : artifacts/data_ingestion/data.zip
-    url: https://www.kaggle.com/api/v1/datasets/download/vedaantsingh/loan-application-risk-prediction-data
+    url: https://www.kaggle.com/api/v1/datasets/download/taweilo/loan-approval-classification-data
+    unzip_loc: artifacts/data_ingestion/data
