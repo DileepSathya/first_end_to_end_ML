@@ -13,3 +13,6 @@ steps:
 8.in that __init__.py file we can create a logs folder in that logging.log file to save the logging info
 9.create a config folder in that create a config.yaml file so  that we can specify the data download link and artifacts folder path
 10.in src/MLOPS/utils/common.py create a funtion call read_yaml
+11.in src/MLOPS/constants/i__init__.py we have to paa the constants with config_paths
+12.in src/MLOPS/components/data_ingstion.py we can write a function to download the data from the url and save it in artifacts folder
+13.GOING TO WORK ON DATA_ingestion pipeline
