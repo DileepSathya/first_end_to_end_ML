@@ -2,3 +2,4 @@ venv/
 MLOPS.egg-info
 logs
 artifacts
+research/__pycache__
