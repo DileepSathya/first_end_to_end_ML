@@ -31,7 +31,18 @@ def read_yaml(yaml_path):
             return content
     except Exception as e:
         raise e
+#call this function to delete the data
+def del_data_greater(col_name,data,value):
+    data = data[data[col_name] <= value]
+    return data
 
+def del_data_lesser(col_name,data,value):
+    data = data[data[col_name] >= value]
+    return data
+
+def col_delete(col_name,data):
+    data=data.drop(columns=[col_name],axis=1)
+    return data
        
 if __name__=="__main__":
 #    read_yaml(Path("config/config.yaml"))

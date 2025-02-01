@@ -17,4 +17,5 @@ steps:
 12.in src/MLOPS/components/data_ingstion.py we can write a function to download the data from the url and save it in artifacts folder
 13.another one is to unzip the data
 13.GOING TO WORK ON DATA_ingestion pipeline
-
+14.Data deletion or row deletion fuction was created in utils/common.py
+15.function for column deletion completed created in utils/common.py
