@@ -6,8 +6,10 @@ data_ingestion:
     unzip_loc: artifacts/data_ingestion/data
 
 data_transformation:
+    data_path : artifacts\data_ingestion\data\loan_data.csv
     to_del : cb_person_cred_hist_length
-    to_modify_1 : person_emp_exp
-    to_modify_2 : person_age
+    to_modify_exp : person_emp_exp
+    to_modify_age : person_age
     threshold_value_age : 80
     threshold_value_exp : 30
+    transformed_file_path : artifacts\data_transformation\data\transformed_data.csv

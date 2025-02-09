@@ -43,9 +43,9 @@ def del_data_lesser(col_name,data,value):
 def col_delete(col_name,data):
     data=data.drop(columns=[col_name],axis=1)
     return data
-       
-if __name__=="__main__":
-#    read_yaml(Path("config/config.yaml"))
 
-    file_creation('artifacts/data_ingestion/data.zip')
+
+       
+
+    
     

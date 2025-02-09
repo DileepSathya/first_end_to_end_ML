@@ -14,14 +14,17 @@ class config_manager:
 
     def data_transformation_config():
         yaml_file=read_yaml(CONFIG_FILE_PATH)
+        data =yaml_file['data_transformation']['data_path']
         to_del_1=yaml_file['data_transformation']['to_del']
-        to_del_row_1=yaml_file['data_transformation']['to_modify_1']
-        to_del_row_2=yaml_file['data_transformation']['to_modify_2']
-        thrs_value_age=yaml_file['data_transformation']['threshold_value_age']
-        thrs_value_exp=yaml_file['data_transformation']['threshold_value_exp']
+        to_del_row_emp=yaml_file['data_transformation']['to_modify_exp']
+        to_del_row_age=yaml_file['data_transformation']['to_modify_age']
+        thrs_value_age=int(yaml_file['data_transformation']['threshold_value_age'])
+        thrs_value_exp=int(yaml_file['data_transformation']['threshold_value_exp'])
+        transformed_file_path=yaml_file['data_transformation']['transformed_file_path']
+
         logger.info("reading yamlfile successful in data_transformation")
         
-        return to_del_1,to_del_row_1,to_del_row_2,thrs_value_age,thrs_value_exp
+        return to_del_1,to_del_row_emp,to_del_row_age,thrs_value_age,thrs_value_exp,data,transformed_file_path
 
 
 
