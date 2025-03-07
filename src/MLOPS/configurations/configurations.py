@@ -27,7 +27,16 @@ class config_manager:
         return to_del_1,to_del_row_emp,to_del_row_age,thrs_value_age,thrs_value_exp,data,transformed_file_path
 
 
+    def feature_eng_config():
+        yaml_file=read_yaml(CONFIG_FILE_PATH)
 
+        data_path=yaml_file['feature_engineering']['data_path']
+        train_path=yaml_file['feature_engineering']['train_filepath']
+        test_path=yaml_file['feature_engineering']['test_filepath']
+
+        logger.info("reading yamlfile successful in feature_engineering")
+
+        return data_path,train_path,test_path
 if __name__=="__main__":
     
     config_manager.data_ingestion_config()

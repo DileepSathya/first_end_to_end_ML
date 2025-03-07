@@ -47,5 +47,9 @@ def col_delete(col_name,data):
 
        
 
-    
+def save_transformed_data(data, file_path):
+        
+  file_creation(file_path)
+  data.to_csv(file_path, index=False)  # Assuming data is a DataFrame
+  print(f"Transformed data saved to {file_path}") 
     

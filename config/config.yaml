@@ -13,3 +13,8 @@ data_transformation:
     threshold_value_age : 80
     threshold_value_exp : 30
     transformed_file_path : artifacts\data_transformation\data\transformed_data.csv
+
+feature_engineering:
+    data_path : artifacts\data_transformation\data\transformed_data.csv
+    train_filepath : artifacts\feature_engineering\data\train.csv
+    test_filepath : artifacts\feature_engineering\data\test.csv
