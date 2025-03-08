@@ -18,3 +18,4 @@ feature_engineering:
     data_path : artifacts\data_transformation\data\transformed_data.csv
     train_filepath : artifacts\feature_engineering\data\train.csv
     test_filepath : artifacts\feature_engineering\data\test.csv
+    LE_yaml_path : artifacts\feature_engineering\data\le_yaml.yaml

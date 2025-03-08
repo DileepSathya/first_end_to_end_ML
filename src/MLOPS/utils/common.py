@@ -52,4 +52,8 @@ def save_transformed_data(data, file_path):
   file_creation(file_path)
   data.to_csv(file_path, index=False)  # Assuming data is a DataFrame
   print(f"Transformed data saved to {file_path}") 
+
+def dict_to_yaml(data_dict,le_yaml_filepath):
+    with open(le_yaml_filepath, 'w') as outfile:
+        yaml.dump(data_dict, outfile, default_flow_style=False)
     
