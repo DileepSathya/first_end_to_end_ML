@@ -37,4 +37,6 @@ def feature_eng():
         logger.exception(e)
         raise e
 if __name__=="__main__":
+#    data_ingestion()
+#    data_transform()
     feature_eng()

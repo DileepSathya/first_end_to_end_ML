@@ -19,3 +19,7 @@ feature_engineering:
     train_filepath : artifacts\feature_engineering\data\train.csv
     test_filepath : artifacts\feature_engineering\data\test.csv
     LE_yaml_path : artifacts\feature_engineering\data\le_yaml.yaml
+    scaled_train_data_path : artifacts\feature_engineering\scaled_data\scaled_train.csv
+    scaled_test_data_path : artifacts\feature_engineering\scaled_data\scaled_test.csv
+    final_train_path: artifacts\feature_engineering\scaled_combined_shuffled\train.csv
+    final_test_path: artifacts\feature_engineering\scaled_combined_shuffled\test.csv

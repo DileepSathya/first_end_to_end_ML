@@ -2,25 +2,20 @@ import os
 from src.MLOPS import logger
 import yaml
 from pathlib import Path
-
 def file_creation(filepath):
-    
-# Check if the file exists
-    filepath=Path(filepath)
-    filedir,filename=os.path.split(filepath)
+    filepath = Path(filepath)
+    filedir, filename = filepath.parent, filepath.name
 
-    if filedir!="":
-        os.makedirs(filedir,exist_ok=True)
-        logger.info(f"Creating directory {filedir} for the file : {filename}")
+    if filedir != "":
+        os.makedirs(filedir, exist_ok=True)
+        logger.info(f"Creating directory {filedir} for the file: {filename}")
     
-    if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
-        with open(filepath,"w") as f:
-
+    if not filepath.exists() or filepath.stat().st_size == 0:
+        with open(filepath, "w") as f:
             pass
-            logger.info(f"Creating empty file: {filepath}")
-
+        logger.info(f"Creating empty file: {filepath}")
     else:
-        logger.info(f"{filename} is already exists")
+        logger.info(f"{filename} already exists")
 
 def read_yaml(yaml_path):
  
@@ -47,11 +42,11 @@ def col_delete(col_name,data):
 
        
 
+
 def save_transformed_data(data, file_path):
-        
-  file_creation(file_path)
-  data.to_csv(file_path, index=False)  # Assuming data is a DataFrame
-  print(f"Transformed data saved to {file_path}") 
+    file_creation(file_path)
+    data.to_csv(file_path, index=False)  # Assuming data is a DataFrame
+    print(f"Transformed data saved to {file_path}")
 
 def dict_to_yaml(data_dict,le_yaml_filepath):
     with open(le_yaml_filepath, 'w') as outfile:

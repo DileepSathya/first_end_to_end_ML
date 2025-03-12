@@ -34,10 +34,14 @@ class config_manager:
         train_path=yaml_file['feature_engineering']['train_filepath']
         test_path=yaml_file['feature_engineering']['test_filepath']
         le_path=yaml_file['feature_engineering']['LE_yaml_path']
+        scaled_train_path=yaml_file['feature_engineering']['scaled_train_data_path']
+        scaled_test_path=yaml_file['feature_engineering']['scaled_test_data_path']
+        final_train_path=yaml_file['feature_engineering']['final_train_path']
+        final_test_path=yaml_file['feature_engineering']['final_test_path']
 
         logger.info("reading yamlfile successful in feature_engineering")
 
-        return data_path,train_path,test_path,le_path
+        return data_path,train_path,test_path,le_path,scaled_train_path,scaled_test_path,final_train_path,final_test_path
 if __name__=="__main__":
     
     config_manager.data_ingestion_config()
